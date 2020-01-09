@@ -1,0 +1,23 @@
+{
+  "name": "grpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huu4707/grpc_test_kong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huu4707/grpc_test_kong/issues"
+  },
+  "homepage": "https://github.com/huu4707/grpc_test_kong#readme",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.3",
+    "grpc": "^1.11.0"
+  }
+}
