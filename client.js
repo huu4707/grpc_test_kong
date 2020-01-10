@@ -12,17 +12,11 @@ var packageDefinition = protoLoader.loadSync(
     });
 var hello = grpc.loadPackageDefinition(packageDefinition).hello;
 
-
-function SayHello(call, callback) {
-    callback(null, {reply: 'Hello ' + call.request.greeting});
-}
-
 function main() {
-  var server = new grpc.Server();
-  server.addService(hello.HelloService.service, {SayHello : SayHello});
-  server.bind('localhost:15002', grpc.ServerCredentials.createInsecure());
-  console.log('Server running at http://localhost:15002')
-  server.start();
+  var client = new hello.HelloService('localhost:9080', grpc.credentials.createInsecure());
+  client.SayHello({greeting: "huu 1"}, function(err, response) {
+    console.log('response', response)
+  });
 }
 
 main();
